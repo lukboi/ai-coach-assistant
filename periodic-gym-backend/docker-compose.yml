@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: periodic-gym-db
+    environment:
+      POSTGRES_DB: periodic-gym
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+    ports:
+      - '5432:5432'

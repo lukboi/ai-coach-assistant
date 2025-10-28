@@ -1,0 +1,27 @@
+{
+  "name": "periodic-gym-backend",
+  "version": "1.0.50",
+  "scripts": {
+    "db:generate": "bun --env-file .env --bun drizzle-kit generate",
+    "db:migrate": "bun --env-file .env --bun drizzle-kit migrate",
+    "db:seed": "bun run src/database/scripts/seed.ts",
+    "dev": "bun run --watch src/index.ts",
+    "prettier:w": "prettier --write .",
+    "prettier:c": "prettier --check ."
+  },
+  "dependencies": {
+    "@elysiajs/openapi": "^1.4.3",
+    "better-auth": "^1.3.12",
+    "drizzle-orm": "^0.44.5",
+    "elysia": "1.4.6",
+    "postgres": "^3.4.7",
+    "zod": "^4.1.9"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "drizzle-kit": "^0.31.4",
+    "exact": "^1.0.1",
+    "prettier": "^3.6.2"
+  },
+  "module": "src/index.js"
+}
