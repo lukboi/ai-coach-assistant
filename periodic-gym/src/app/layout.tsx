@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br" suppressHydrationWarning>
       <body className={`${interSans.variable} antialiased`}>
-        <Header/>
+        {/* <Header/> */}
         {children}
       </body>
     </html>
